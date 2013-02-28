@@ -49,10 +49,10 @@ snippet xunless
 snippet eval
 	eval {
 		${1:# do something risky...}
-	};
-	if ($@) {
+	} or do {
+		my $eval_error = $@ || "Zombie error!";
 		${2:# handle failure...}
-	}
+	};
 # While Loop
 snippet wh
 	while (${1}) {
