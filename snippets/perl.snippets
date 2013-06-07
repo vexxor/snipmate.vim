@@ -49,7 +49,7 @@ snippet xunless
 snippet eval
 	eval {
 		${1:# do something risky...}
-                1;
+		1;
 	} or do {
 		my $eval_error = $@ || "Zombie error!";
 		${2:# handle failure...}
